@@ -81,17 +81,44 @@ class _HomeState extends ConsumerState<Home> {
                         const SizedBox(height: 20),
                         Text(
                           profileText,
-                          textAlign:
-                              isMobile ? TextAlign.center : TextAlign.left,
+                          textAlign: TextAlign.justify,
                           style: Theme.of(context).textTheme.bodyMedium,
                         ),
+                        const SizedBox(height: 30),
+                        Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Image.asset(
+                                'assets/icons/location.png',
+                                width: 18,
+                                height: 18,
+                              ),
+                              const SizedBox(width: 5),
+                              const Text("Mumbai, India")
+                            ]),
+                        const SizedBox(height: 10),
+                        Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              const SizedBox(width: 5),
+                              Container(
+                                decoration: BoxDecoration(
+                                  color: context.colorScheme.primary,
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                height: 8,
+                                width: 8,
+                              ),
+                              const SizedBox(width: 8),
+                              const Text("Available for new projects")
+                            ])
                       ],
                     ),
                   )),
               ResponsiveRowColumnItem(
                   rowFlex: 1,
                   child: ClipRRect(
-                    borderRadius: BorderRadius.circular(300),
+                    borderRadius: BorderRadius.circular(150),
                     child: Image.asset(
                         cacheHeight: 250,
                         cacheWidth: 250,

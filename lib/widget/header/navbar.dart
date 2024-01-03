@@ -94,20 +94,21 @@ class MobileNavbar extends ConsumerStatefulWidget {
 class _MobileNavbarState extends ConsumerState<MobileNavbar> {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
-      child: AppBar(
-        title: const Text("My Portfolio"),
-        automaticallyImplyLeading: false,
-        forceMaterialTransparency: true,
-        actions: [
-          IconButton(
-              onPressed: () {
-                Scaffold.of(context).openEndDrawer();
-              },
-              icon: const Icon(Icons.menu))
-        ],
-      ),
+    return AppBar(
+      title: const Text("My Portfolio"),
+      automaticallyImplyLeading: false,
+      centerTitle: true,
+      scrolledUnderElevation: 0,
+      elevation: 0,
+      backgroundColor: Theme.of(context).colorScheme.onInverseSurface,
+      actions: [
+        IconButton(
+            onPressed: () {
+              Scaffold.of(context).openEndDrawer();
+            },
+            icon: const Icon(Icons.menu)),
+        const SizedBox(width: 10),
+      ],
     );
   }
 }
